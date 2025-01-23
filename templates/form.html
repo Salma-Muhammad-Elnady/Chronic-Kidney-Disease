@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/ailogo.jpg') }}" alt="Logo" class="logo">
+            <h1>Here you can register your data</h1>
+        </div>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="input-box">
+                <label for="BMI"><i class="fas fa-weight"></i> BMI</label>
+                <input type="number" id="BMI" name="BMI" step="0.01" required autocomplete="off">
+            </div>
+            
+            <div class="input-box">
+                <label for="FamilyHistoryKidneyDisease"><i class="fas fa-dna"></i> Family History Kidney Disease</label>
+                <select id="FamilyHistoryKidneyDisease" name="FamilyHistoryKidneyDisease" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label for="SystolicBP"><i class="fas fa-tachometer-alt"></i> Systolic BP</label>
+                <input type="number" id="SystolicBP" name="SystolicBP" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+                <label for="FastingBloodSugar"><i class="fas fa-syringe"></i> Fasting Blood Sugar</label>
+                <input type="number" id="FastingBloodSugar" name="FastingBloodSugar" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">                         
+               <label for="HbA1c"><i class="fas fa-vial"></i> HbA1c</label>
+               <input type="number" id="HbA1c" name="HbA1c" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+               <label for="SerumCreatinine"><i class="fas fa-flask"></i> Serum Creatinine</label>
+               <input type="number" id="SerumCreatinine" name="SerumCreatinine" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+                <label for="BUNLevels "><i class="fas fa-vials"></i> BUN Levels</label>
+                <input type="number" id="BUNLevels" name="BUNLevels" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+                <label for="GFR"><i class="fas fa-water"></i> GFR</label>
+                <input type="number" id="GFR" name="GFR" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+                <label for="ProteinInUrine"><i class="fas fa-prescription-bottle-alt"></i> Protein In Urine</label>
+                <input type="number" id="ProteinInUrine" name="ProteinInUrine" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+                <label for="Edema"><i class="fa-solid fa-droplet"></i> Edema</label>
+                <select id="Edema" name="Edema" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>               
+            </div>
+
+            <div class="input-box">
+                <label for="MuscleCramps"><i class="fas fa-running"></i> Muscle Cramps</label>
+                <input type="number" id="MuscleCramps" name="MuscleCramps" step="0.01" required autocomplete="off">
+            </div>
+
+            <div class="input-box">
+                <label for="Itching"><i class="fas fa-hand-holding-medical"></i> Itching</label>
+                <input type="number" id="Itching" name="Itching" step="0.01" required autocomplete="off">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+        {% if result %}
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="{{ url_for('static', filename='images/kidney_logo.png') }}" alt="Kidney Disease Logo" class="modal-logo">
+                <h2>Prediction Result</h2>
+                <p class="result-text">{{ result }}</p>
+                <div id="info-section">
+                    <p class="additional-info"> We recommend conducting further medical examinations to confirm the injury and to take the necessary and appropriate treatment methods.</p> 
+                </div>                
+                <div class="button-container">         
+                <a href="{{ url_for('home') }}" class="button">&laquo; Return to the homepage </a>                                
+                <a href="{{ url_for('form') }}" class="button">Return to the input form &raquo;</a>
+                </div>
+            </div>
+        </div>
+               
+        {% endif %}
+                
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

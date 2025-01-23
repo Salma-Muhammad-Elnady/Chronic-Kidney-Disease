@@ -1,0 +1,119 @@
+  /* Body styling */
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('/static/images/purplewave.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+  }
+
+  /* Container styling */
+.container {
+    display: flex;
+    height: 100%;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  /* Image container */
+.image-container { 
+    flex: 1; 
+    text-align: left; 
+}    
+
+
+  /* Animation keyframes */
+@keyframes upAndDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+   /* Left side styling */
+.left-side {
+    flex: 1;
+    display: flex;
+    align-items:center;
+}
+
+  /* Image styling */
+.image{
+    width: 50%; 
+    height: auto; 
+    animation: upAndDown 3s infinite; 
+    transition: transform 0.5s, box-shadow 0.5s; 
+}
+
+  /* Project title */
+.project-title {
+     font-size: 2.5em; 
+     font-weight: bold; 
+     margin-bottom: 20px; 
+     font-family:'Franklin Gothic Medium';
+     color: aliceblue;
+     
+    } 
+     
+    /* Project description */
+.project-description { 
+    font-size: 1.2em; 
+    text-align:justify; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+ }
+
+    /* Navigation button */
+ .navigate-button {
+    border-radius: 4px;
+    background-color:rgb(218, 50, 218);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px; 
+    padding: 12px 20px; 
+    width: 280px; 
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 23px auto 0; 
+    display: block; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }    
+   /* Button span styling */
+.navigate-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+  /* Button span hover effect */
+.navigate-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+  /* Button hover animation */
+.navigate-button:hover span {
+    padding-right: 25px;
+}
+
+.navigate-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+ 
+
+
+

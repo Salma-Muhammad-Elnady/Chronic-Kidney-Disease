@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Chronic Kidney Disease</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="{{ url_for('static', filename='images/image.png') }}" alt="Description of image" class="image">
+            <div>
+                <h1 class="project-title">Predicting Chronic Kidney Disease</h1>
+                <p class="project-description">
+                    Hello, I am here to help you understand the likelihood of infection <br>and improve your health
+                    I wish you good health.
+                </p>
+                <button class="navigate-button" onclick="window.location.href='{{ url_for('form') }}';"><span>Enter Medical Information</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -85,7 +85,7 @@ A web application that determines whether a person has chronic kidney disease or
 
  # Web application images and prediction results:  
  ### 1. Home page : 
- The home page contains a simple definition of the web application and a button to go to the medical data registration page. 
+ + #### The home page contains a simple definition of the web application and a button to go to the medical data registration page. 
 ![img14](https://github.com/user-attachments/assets/658986bc-2c41-483e-87ea-f2e9f7f169f1)
 ________________________________________________________________________________________
 ### 2. Medical data entry form page : 

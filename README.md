@@ -1,7 +1,7 @@
 # **Web application for predicting chronic kidney disease**
 # Overview :
 A web application that determines whether a person has chronic kidney disease or not through a set of features through which we enter data into the model and then predict the result. 
-The most important of these features are: **(BMI , Family History Kidney Disease , Systolic BP , Fasting Blood Sugar , HbA1c , Serum Creatinine , BUN Levels , GFR , Protein in Urine , Edema , Muscle Cramps , Itching).**
+The most important of these features are: (BMI , Family History Kidney Disease , Systolic BP , Fasting Blood Sugar , HbA1c , Serum Creatinine , BUN Levels , GFR , Protein in Urine , Edema , Muscle Cramps , Itching).
 
 
 

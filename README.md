@@ -84,14 +84,17 @@ A web application that determines whether a person has chronic kidney disease or
 ### The dataset for this project can be found [here](https://www.kaggle.com/datasets/rabieelkharoua/chronic-kidney-disease-dataset-analysis)
 
  # Web application images and prediction results:  
- ### 1. Home page : The home page contains a simple definition of the web application and a button to go to the medical data registration page. 
+ ### 1. Home page : 
+ The home page contains a simple definition of the web application and a button to go to the medical data registration page. 
 ![img14](https://github.com/user-attachments/assets/658986bc-2c41-483e-87ea-f2e9f7f169f1)
 ________________________________________________________________________________________
-### 2. Medical data entry form page : It contains a set of important features through which data is entered to display the prediction result.
+### 2. Medical data entry form page : 
+It contains a set of important features through which data is entered to display the prediction result.
 ![img15](https://github.com/user-attachments/assets/b8f23b57-fa8e-4899-a8b8-9f7db993dcc0)
 ________________________________________________________________________________________
 ### 3. Medical data entry form page with data entry of the person to be diagnosed 
 ![img16](https://github.com/user-attachments/assets/b23c84c1-fea3-475b-9a3e-4b106e834ec4)
 ________________________________________________________________________________________
-### 4. Display the prediction result based on the entered data.
+### 4. Display the prediction result: 
+Display the prediction result based on the entered data with an alert message to conduct further medical examination. It also contains 2 buttons, one to go to the home page and another to return to the data entry form.
 ![img17](https://github.com/user-attachments/assets/3714170c-653c-4d52-8fa0-7e0b93b04ff8)
